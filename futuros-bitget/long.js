@@ -106,3 +106,12 @@ async function placeLongPosition() {
 }
 
 placeLongPosition()
+app.get('/', (req, res) => {
+    res.send("hello")
+});
+
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
