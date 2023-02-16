@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-const dotenv = require("dotenv");
-dotenv.config();
+//const dotenv = require("dotenv");
+//dotenv.config();
 
-//require('dotenv').config() 
+require('dotenv').config() 
 const client = require('./services/client')
 
 const PAIR1 = process.argv[2] || 'BTC'
