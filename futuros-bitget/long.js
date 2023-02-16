@@ -1,3 +1,4 @@
+//tst code
 require('dotenv').config()
 const client = require('./services/client')
 
@@ -104,3 +105,4 @@ async function placeLongPosition() {
 
 }
 
+placeLongPosition()
