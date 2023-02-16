@@ -1,9 +1,4 @@
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
-const dotenv = require("dotenv");
-dotenv.config();
+require('dotenv').config()
 const client = require('./services/client')
 
 const PAIR1 = process.argv[2] || 'BTC'
@@ -109,13 +104,3 @@ async function placeLongPosition() {
 
 }
 
-placeLongPosition()
-app.get('/', (req, res) => {
-    res.send("hello")
-});
-
-
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
